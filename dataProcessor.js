@@ -1,5 +1,7 @@
 require('dotenv').config();
 
+console.log(process.env);
+
 // importing your functions
 const workoutCalculator = require('./workoutReader'); 
 const healthCalculator = require('./healthReader');   
@@ -66,6 +68,7 @@ async function processFiles() {
 
 // running the main program
 processFiles();
+
 
 
 
