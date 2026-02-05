@@ -1,10 +1,8 @@
 require('dotenv').config({ path: '../../../.env' });
-console.log("USER_NAME:", process.env.USER_NAME);
-console.log("WEEKLY_GOAL:", process.env.WEEKLY_GOAL);
 
-// importing my functions
-const workoutCalculator = require('./workoutReader');  // already returns totalWorkouts & totalMinutes
-const healthCalculator = require('./healthReader');    // now returns { totalEntries }
+// importing your functions
+const workoutCalculator = require('./workoutReader'); 
+const healthCalculator = require('./healthReader');   
 
 // converting the WEEKLY_GOAL to a number
 const WEEKLY_GOAL = Number(process.env.WEEKLY_GOAL || 0);
@@ -68,4 +66,5 @@ async function processFiles() {
 
 // running the main program
 processFiles();
+
 
