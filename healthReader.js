@@ -1,3 +1,5 @@
+console.log("healthReader.js started");
+
 const fs = require("fs").promises;
 
 async function healthMetricsCounter(filePath) {
@@ -32,3 +34,4 @@ async function healthMetricsCounter(filePath) {
 
 // function to verify the output
 healthMetricsCounter("./data/health-metrics.json");
+
