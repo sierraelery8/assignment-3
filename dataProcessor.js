@@ -1,4 +1,4 @@
-require('dotenv').config({ path: '../../../.env' });
+require('dotenv').config();
 
 // importing your functions
 const workoutCalculator = require('./workoutReader'); 
@@ -66,5 +66,6 @@ async function processFiles() {
 
 // running the main program
 processFiles();
+
 
 
