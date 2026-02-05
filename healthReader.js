@@ -9,12 +9,12 @@ async function healthMetricsCounter(filePath) {
     const healthData = JSON.parse(data);
 
     // validating the structure
-    if (!Array.isArray(healthData)) {
-      throw new Error("Invalid JSON format: expected an array");
+    if (!healthData.metrics || !Array.isArray(healthData.metrics)) {
+      throw new Error("Invalid JSON format: 'metrics' array not found");
     }
 
-    // counting entries
-    const totalEntries = healthData.length;
+    // counting the health entries
+    const totalEntries = healthData.metrics.length;
 
     console.log(`Total health entries: ${totalEntries}`);
     return totalEntries;
