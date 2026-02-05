@@ -1,4 +1,6 @@
-require('dotenv').config();
+require('dotenv').config({ path: '../../../.env' });
+console.log("USER_NAME:", process.env.USER_NAME);
+console.log("WEEKLY_GOAL:", process.env.WEEKLY_GOAL);
 
 // importing my functions
 const workoutCalculator = require('./workoutReader');  // already returns totalWorkouts & totalMinutes
@@ -66,3 +68,4 @@ async function processFiles() {
 
 // running the main program
 processFiles();
+
